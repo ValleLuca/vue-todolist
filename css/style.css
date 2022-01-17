@@ -110,3 +110,13 @@ main section:first-child {
 section div {
     padding-top: 10px;
 }
+
+.hoverxcolor:hover {
+ color:red;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.remove {
+    display: none;
+}
