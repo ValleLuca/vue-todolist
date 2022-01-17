@@ -22,18 +22,16 @@
         <div class="container">
             <div class="row">
                 <div class="col d-flex justify-content-center">
-                    <input type="text" v-model="texTodo">
+                    <input type="text" v-model="texTodo" @keyup.enter="addTodo">
                     <button class="mx-2" @click="addTodo">Aggiungi</button>
                 </div>
             </div>
             <hr>
             <div class="row">
-                <ul>
-                    <li v-for="(oggetti, index) in todoList" class="d-flex justify-content-around" @click="removeClass" :class="{ remove: rimuovi }">
-                        {{oggetti.componente}}
-                        <i class="bi bi-x-lg hoverxcolor"></i>
-                    </li>
-                </ul>
+                    <div v-for="(oggetti, index) in todoList" class="d-flex justify-content-between hoverList">
+                        <span @click="fatto(oggetti)" :class="{ remove: oggetti.fatto }">{{oggetti.componente}}</span>
+                        <span @click="removeClass(index)"><i class="bi bi-x-lg hoverxcolor"></i></span>
+                    </div>
             </div>
         </div>
     </main>

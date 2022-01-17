@@ -2,19 +2,32 @@ var app = new Vue({
     el: '#containerMain',
     data: {
       texTodo: "",
-      todoList: []   
+      todoList: [
+        {
+          componente: "carne",
+          fatto: false
+        }
+      ]   
     },
     methods: {
       addTodo: function() {
         this.todoList.push({
           componente: this.texTodo,
-          fatto: false,
-          rimuovi: false
+          fatto: false
         });
         this.texTodo = "";
       },
-      removeClass: function() {
-        this.rimuovi = true;
+      fatto: function(elemento){
+        if(elemento.fatto == false){
+          elemento.fatto = true;
+        }
+        else
+        {
+          elemento.fatto = false;
+        }
+      },
+      removeClass: function (elem) {
+        this.todoList.splice(elem, 1);
       }
     }
   })
