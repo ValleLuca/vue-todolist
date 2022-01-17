@@ -17,47 +17,15 @@
     </header>
 
     <main id="containerMain">
-        <section>
-            <button type="button" class="AddTask">Add Task</button>
-            <button type="button" class="AddSection">Add Section</button>
-        </section>
+       <input type="text" v-model="texTodo">
+       <button @click="addTodo">Aggiungi</button>
+       <hr>
 
-        <section>
-            <h2>New Task</h2>
-            <span><span class="colorGreen">&#x2714; </span> Quarterly Newsletter </span><span class="RadiusBlue"> Editorial</span>
-        </section>
-
-        <section>
-            <h2>Today</h2>
-            <div>
-                <span><span class="colorGreen">&#x2714; </span> Recruiting blog post </span><span class="RadiusBlue"> Editorial</span>
-            </div>
-            <div>
-                <span><span class="colorGreen">&#x2714; </span> Mobile app launch </span><span class="RadiusViolet"> Q1 Goals</span>
-            </div>
-            <div>
-                <span><span class="colored">&#x24e7; </span> Interview John H. </span><span class="RadiusGreen"> Recruiting</span>
-            </div>
-            <div>
-                <span><span class="colorGreen">&#x2714; </span> Summit update to mobile storefronts </span><span class="RadiusOrange"> Mobile</span>
-            </div>
-        </section>
-        
-        <section>
-            <h2>Upcoming</h2>
-            <div>
-                <span><span class="colored">&#x24e7; </span> Schedule meeting with Alex </span>
-            </div>
-            <div>
-                <span><span class="colorGreen">&#x2714; </span> Homepage refresh </span><span class="RadiusPink"> Website</span>
-            </div>
-            <div>
-                <span><span class="colorGreen">&#x2714; </span> Onboard new Sales team members </span><span class="RadiusBrown"> Sales</span>
-            </div>
-            <div>
-                <span><span class="colorGreen">&#x2714; </span> Review editorial calendar </span><span class="RadiusBlue"> Editorial</span>
-            </div>
-        </section>
+        <ul>
+            <li v-for="(oggetti, index) in todoList">
+                {{oggetti.componente}}
+            </li>
+        </ul>
     </main>
 
     <!-- JS -->
