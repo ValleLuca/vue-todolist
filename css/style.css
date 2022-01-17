@@ -1,0 +1,112 @@
+body {
+    background-color: #f6f8f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+     padding: 15px;
+     margin-bottom: 50px;
+}
+
+header img {
+    margin-left: 10px;
+    height: 50px;
+}
+
+#logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+main {
+    margin: auto;
+    width: 70%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 40px;
+}
+
+.AddTask, .AddSection {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.AddTask {
+    color: white;
+    background-color: #46adf0;
+    border: 1px solid #46adf0;
+    
+}
+
+.AddSection {
+    color: #c7ccd3;
+    background-color: white;
+    border: 1px solid #c7ccd3;
+}
+
+section h2::before {
+    content: "▼" ;
+    font-size: 15px;
+    padding-right: 5px;
+}
+
+main section:first-child {
+    margin-bottom: 30px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+
+.colorGreen {
+    color: green;
+    border: 1px solid green;
+    border-radius: 60px;
+    padding: 2px;
+    vertical-align: middle;
+}
+
+.colored {
+    color: red;
+}
+
+.RadiusViolet, .RadiusGreen, .RadiusPink, .RadiusBrown, .RadiusOrange {
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 50px;
+    color: white;
+}
+
+.RadiusBlue {
+    color: white;
+    background-color: #44aaea;
+    padding: 7px 10px;
+    font-size: 13px;
+    border-radius: 50px;
+}
+
+.RadiusViolet {
+    background-color: #9d72e5;
+}
+
+.RadiusOrange {
+    background-color: #f29e33;
+}
+
+.RadiusGreen {
+    background-color: #64c0a9;
+}
+
+.RadiusPink {
+    background-color: #d963a0;
+}
+
+.RadiusBrown {
+    background-color: #b1c826;
+}
+
+section div {
+    padding-top: 10px;
+}
